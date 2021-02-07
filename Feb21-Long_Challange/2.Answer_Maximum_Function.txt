@@ -1,0 +1,30 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+#define ll long long int
+
+int main()
+{
+    int t;
+    cin>>t;
+    while(t--)
+    {
+        ll n,i;
+        cin>> n;
+        
+        ll a[n],ans;
+        for(i=0; i<n; i++)
+        {
+            cin>>a[i];
+        }
+ 
+        sort(a,a+n);
+                
+        int x=0, y=n/2, z= n-1;
+            ans = abs(a[x]-a[y]) + abs(a[y]-a[z]) + abs(a[z]-a[x]);
+
+        cout<<ans<<endl;
+    }
+  
+    return 0;
+}
